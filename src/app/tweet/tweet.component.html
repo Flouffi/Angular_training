@@ -1,0 +1,22 @@
+<!-- <div class="tweet">
+    <h2>Titre du tweet</h2>
+<input type="text"[(ngModel)]="required">
+<br>
+<textarea [(ngModel)]="content" [ngStyle]="content.length > '140' ? '{'border-color':'red'}' : 'green'" class="tweetbox" rows="5" cols="33"  maxlength="140"></textarea>
+<br>
+{{content.length}} /140
+<button [disabled]="content.length>140">Tweeter</button>
+</div> -->
+<div>
+    <div>
+    <input type="text" [(ngModel)]="title" placeholder="Titre du tweet" maxlength="15">
+</div>
+<div>
+    <!-- Autre Solution [style.borderColor]="content.length === text.maxLength ? 'red' : '#ccc'"-->
+    <!-- Autre Solution [ngStyle]="{'border-color':content.length === text.maxLength ? 'red' : '#ccc'} -->
+
+    <textarea [ngClass]="{'error':content.length === text.maxLength}" cols="16" rows="7" [(ngModel)]="content" maxlength="140" placeholder="Tweet" #text></textarea> <!-- #text == id=text -->
+</div>
+
+<button (click)="onSend()" [disabled]="!(title && content)">Tweeter</button> {{ content.length }} / {{text.maxLength}}
+    </div>

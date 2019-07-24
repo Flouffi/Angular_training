@@ -1,0 +1,13 @@
+<div class="box">
+
+<h1 (click)="show=!show">{{ title }}</h1>
+
+<!-- <div [style.display]="show ? 'none' : 'block'">
+Contenu
+</div> -->
+<div [hidden]="show">
+
+    <!-- Transclusion -->
+<ng-content></ng-content>
+</div>
+</div>

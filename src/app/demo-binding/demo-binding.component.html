@@ -1,0 +1,15 @@
+<div>
+    <h2> Two Data Binding </h2>
+<!-- [(ngModel)] == FORM, ne marche pas sur div etc.. -->
+    <div>
+        <label> Avec NG Model </label>
+        <input type="text" [(ngModel)]="name">
+</div>
+
+<div>
+        <label> Sans NG Model </label>
+        <input type="text" (input)="updateName($event)"><br>
+        <button class="btn btn-success">Envoyer</button>
+    </div>
+    {{ name }}
+</div>

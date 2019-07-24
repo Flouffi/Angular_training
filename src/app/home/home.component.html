@@ -1,0 +1,24 @@
+<div class="container">
+
+  <input type="text" appInputText>
+  <input type="text" appInputText>
+
+  <p appToggleText [color]="'red'">Hello World</p>
+<app-demo-binding></app-demo-binding>
+<app-hello></app-hello> 
+<!-- <div class="app-hello"></div>    selector: ".app-hello"
+<div app-hello></div>                 selector: "[app-hello]" -->
+
+<!-- <app-exo [title]="'Lorem 2'">
+<div>Hello bro</div>
+</app-exo>  -->
+
+<app-tweet (Tweet)="saveTweet($event)">
+
+</app-tweet>
+
+<app-exo *ngFor="let message of twittes" [title]="message.title">
+  <p [innerHTML]="message.content | html2br | keepHtml"></p>
+</app-exo>
+
+</div>

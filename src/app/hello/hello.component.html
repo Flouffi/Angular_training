@@ -1,0 +1,18 @@
+<div class="hello">
+    
+    <input type="text" [(ngModel)]="text">
+    
+    <p [style.color]="text ==='toto' ? 'red' : 'green'">{{text}}</p>
+    <button (click)="toast($event)" [disabled]="!text.length">Click Me</button>
+
+    <!-- [Property Binding] -->
+    <!-- {{ string interpolation }} -->
+    <!-- {{ value | json }} permet de filtrer   Entrée | Sortie --> 
+     <!-- {{ sayHello() +' ' + text }}  -->
+ 
+     
+     {{ sayHello(' toto')}}
+
+ 
+
+</div>
